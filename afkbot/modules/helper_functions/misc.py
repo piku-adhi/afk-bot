@@ -4,7 +4,7 @@ from typing import List, Dict
 from telegram import MAX_MESSAGE_LENGTH, InlineKeyboardButton, Bot, ParseMode,Update
 from telegram.error import TelegramError
 
-from cinderella import LOAD, NO_LOAD
+from afkbot import LOAD, NO_LOAD
 
 
 class EqInlineKeyboardButton(InlineKeyboardButton):
@@ -68,12 +68,12 @@ def paginate_modules(page_n: int, module_dict: Dict, prefix, chat=None) -> List:
     # can only have a certain amount of buttons side by side
     if len(pairs) > 7:
         pairs = pairs[modulo_page * 7:7 * (modulo_page + 1)] + [
-            (EqInlineKeyboardButton("<<<", callback_data="{}_prev({})".format(prefix, modulo_page)),
-                EqInlineKeyboardButton("🏡 Home", callback_data="bot_start"),
-             EqInlineKeyboardButton(">>>", callback_data="{}_next({})".format(prefix, modulo_page)))]
+            (EqInlineKeyboardButton("🔙", callback_data="{}_prev({})".format(prefix, modulo_page)),
+                EqInlineKeyboardButton("❇HOME❇", callback_data="bot_start"),
+             EqInlineKeyboardButton("🔜", callback_data="{}_next({})".format(prefix, modulo_page)))]
 
     else:
-        pairs += [[EqInlineKeyboardButton("🏡 Home", callback_data="bot_start")]]
+        pairs += [[EqInlineKeyboardButton("Home", callback_data="bot_start")]]
 
 
     return pairs
