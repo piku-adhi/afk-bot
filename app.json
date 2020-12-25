@@ -18,20 +18,16 @@
          "description": "Your Name",
          "value": "ADITHYAN KOLLAM"
       },
-      "
        "START_IMG": {
          "description": "Image shows when hit /start",
          "value": "anything"    
       },
-      "
-     
-      "TOKEN": {
+       "TOKEN": {
          "description": "Your bot token.",
          "required": true,
          "value": ""
       },
-      "
-   },
+      
    "keywords": [
       "telegram",
       "weeb",
