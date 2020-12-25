@@ -18,12 +18,12 @@ from telegram.error import Unauthorized, BadRequest, TimedOut, NetworkError, Cha
 from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryHandler
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
-from cinderella import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, OWNER_NAME, ALLOW_EXCL
-from cinderella.modules import ALL_MODULES
-from cinderella.modules.helper_funcs.chat_status import is_user_admin
-from cinderella.modules.helper_funcs.misc import paginate_modules
-from cinderella.modules.connection import connected
-from cinderella.modules.connection import connect_button
+from afkbot import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, OWNER_NAME, ALLOW_EXCL
+from afkbot.modules import ALL_MODULES
+from afkbot.modules.helper_funcs.chat_status import is_user_admin
+from afkbot.modules.helper_funcs.misc import paginate_modules
+from afkbot.modules.connection import connected
+from afkbot.modules.connection import connect_button
 
 
 PM_START_TEXT = """
@@ -74,7 +74,7 @@ else:
   img = START_IMG    
     
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("cinderella.modules." + module_name)
+    imported_module = importlib.import_module("afkbot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -170,10 +170,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="OWNER",url="https://t.me/Ravanan_of_telegram"),InlineKeyboardButton(text="DEVELOPER",url="https://t.me/mtoffbotdev")]]
-    keyboard += [[InlineKeyboardButton(text="BOT TESTING",url="http://t.me/allbottest"),InlineKeyboardButton(text="Movies",url="http://t.me/HoneyBeesChat")]]
-    keyboard += [[InlineKeyboardButton(text="нєℓρ",callback_data="help_back"),InlineKeyboardButton(text="🔗CONNECT🔗",callback_data="main_connect")]]
-                  
+    keyboard = [[InlineKeyboardButton(text="OWNER",url="https://t.me/POWER_OF_TELEGRAM")]]
+    keyboard = [[InlineKeyboardButton(text="$CONNECT$",call_back="main_connect")]]            
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
