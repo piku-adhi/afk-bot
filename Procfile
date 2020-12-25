@@ -1,2 +1,2 @@
-worker: python3 -m afk-bot
+worker: python3 -m afkbot
 ps:scale worker=1
