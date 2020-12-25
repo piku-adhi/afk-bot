@@ -151,7 +151,7 @@ SUDO_USERS.add(1118936839)
 # Telethon
 api_id = TELETHON_ID
 api_hash = TELETHON_HASH
-client = TelegramClient("cinderella", api_id, api_hash)
+client = TelegramClient("afkbot", api_id, api_hash)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 dispatcher = updater.dispatcher
@@ -173,7 +173,7 @@ else:
         spam_watch = None
         
 # Load at end to ensure all prev variables have been set
-from cinderella.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler
+from afkbot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, CustomMessageHandler
 
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
