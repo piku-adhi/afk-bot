@@ -7,11 +7,11 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "A telegram pro bot to manage ur groups and much extra features.",
+   "description": "A telegram afk bot .",
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
-         "value": "True"
+         "value": false,
       },
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
@@ -45,7 +45,7 @@
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
-         "value": "sqldbtype://username:pw@hostname:port/db_name"
+         "value": "error"
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
@@ -88,12 +88,12 @@
       },
       "STRICT_GBAN": {
          "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
-         "value": "True"
+         "value": false,
       },
         
       "STRICT_GMUTE": {
          "description": "Enforce gmute across new groups as well as old groups. When a gmutes user talks, he will be muted",
-         "value": "True"
+         "value": false,
       },
       "SUDO_USERS": {
          "description": "A space separated list of user IDs who you want to assign as sudo users.",
@@ -102,7 +102,7 @@
       },
       "SUPPORT_USERS": {
          "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
-         "required": "True",
+         "required": "false",
          "value": "1331325830"
       },
      
@@ -131,10 +131,10 @@
          "required": false,
          "value": ""
       },
-      "LYDIA_API": {
-         "description": "Put here lydia API.venoghil",
-         "required": true,
-         "value": "9459646ca3dff1ff00ff4a98c7ead3368492c77cd2252f0dbb8d6959eb97e884fd65001a51faf22230774b3ae7df7b2ebd9defdeb70b90f6de10a449d783245a" 
+      "hello": {
+         "description": ".venoghil",
+         "required": false,
+         "value": "9" 
       }
    },
    "keywords": [
@@ -145,8 +145,8 @@
       "cinderella"
       
    ],
-   "name": "poralishajii",
-   "repository": "https://github.com/poralishajii/DUHO",
+   "name": "afk-bot",
+   "repository": "https://github.com/piku-adhi/afk-bot",
    "success_url": "https://telegram.dog/Piku_piku_bot",
    "logo": "https://telegra.ph/file/6c0d64e9418d9fcd1bb9f.jpg"
 }
