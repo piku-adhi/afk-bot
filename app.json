@@ -11,7 +11,7 @@
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
-         "value": false,
+         "value": "true"
       },
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
@@ -44,7 +44,7 @@
       },
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
-         "required": false,
+         "required": "false"
          "value": "error"
       },      
       "OWNER_ID": {
