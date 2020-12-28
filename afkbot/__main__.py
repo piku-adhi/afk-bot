@@ -19,7 +19,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 from afkbot import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, OWNER_NAME, ALLOW_EXCL
-from afkbot.modules import ALL-MODULE
+from afkbot.modules import ALL_MODULE 
 from afkbot.modules.helper_funcs.chat_status import is_user_admin
 from afkbot.modules.helper_funcs.misc import paginate_modules
 from afkbot.modules.connection import connected
